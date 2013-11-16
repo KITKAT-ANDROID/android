@@ -43,7 +43,7 @@
   <project path="external/koush/Widgets" name="android_external_koush_Widgets" remote="ka" revision="4.4" />
 
   <!--Evervolv (Github) Hosted Projects-->
-  <project path="build" name="android_build" remote="ka" revision="4.4" />
+  <project path="build" name="android_build" remote="ka" revision="4.4" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="bionic" name="android_bionic" groups="ev-aosp" />
