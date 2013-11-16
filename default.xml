@@ -17,8 +17,7 @@
 
   <!--Evervolv Extra Common Projects-->
   <project path="android" name="android" remote="ka" revision="4.4" />
-    <copyfile src="eclipse-classpath" dest=".classpath" />
-  </project>
+ 
   <project path="external/bash" name="android_external_bash" groups="ev-extra" />
   <project path="external/busybox" name="android_external_busybox" groups="ev-extra" />
   <project path="external/curl" name="android_external_curl" groups="ev-extra" />
