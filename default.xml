@@ -3,9 +3,15 @@
 
   <remote  name="aosp"
            fetch="https://android.googlesource.com/" />
+           
   <remote  name="github"
            fetch="git://github.com/Evervolv/"
            review="review.evervolv.com"/>
+           
+   <remote name="ka"
+           fetch="git://github.com/KITKAT-ANDROID/" />
+         
+           
   <default revision="kitkat"
            remote="github"
            sync-j="4" />
