@@ -36,6 +36,11 @@
   <project path="device/htc/m7-common" name="android_device_htc_m7-common" remote="ka" revision="4.4" />
   <project path="device/htc/msm8960-common" name="android_device_htc_msm8960-common" remote="ka" revision="4.4" />
   <project path="kernel/htc/m7" name="android_kernel_htc_m7" remote="ka" revision="4.4" />
+  
+  <project path="external/koush/ion" name="android_external_koush_ion" remote="ka" revision="4.4" />
+  <project path="external/koush/AndroidAsync" name="android_external_koush_AndroidAsync" remote="ka" revision="4.4" />
+  <project path="external/koush/Superuser" name="android_external_koush_Superuser" remote="ka" revision="4.4" />
+  <project path="external/koush/Widgets" name="android_external_koush_Widgets" remote="ka" revision="4.4" />
 
   <!--Evervolv (Github) Hosted Projects-->
   <project path="build" name="android_build" remote="ka" revision="4.4" />
