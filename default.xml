@@ -8,16 +8,15 @@
            fetch="git://github.com/Evervolv/"
            review="review.evervolv.com"/>
            
-   <remote name="ka"
+  <remote name="ka"
            fetch="git://github.com/KITKAT-ANDROID/" />
-         
-           
+  
   <default revision="kitkat"
            remote="github"
            sync-j="4" />
 
   <!--Evervolv Extra Common Projects-->
-  <project path="android" name="android" groups="ev-extra" >
+  <project path="android" name="android" remote="ka" revision="4.4" />
     <copyfile src="eclipse-classpath" dest=".classpath" />
   </project>
   <project path="external/bash" name="android_external_bash" groups="ev-extra" />
@@ -30,12 +29,16 @@
   <project path="external/vim" name="android_external_vim" groups="ev-extra" />
   <project path="external/wget" name="android_external_wget" groups="ev-extra" />
  
-  <project path="vendor/ev" name="android_vendor_ev" groups="ev-extra" />
-
-
+  <project path="vendor/kitkat" name="android_vendor_kitkat" remote="ka" revision="4.4" />
+  <project path="vendor/htc" name="proprietary_vendor_htc" remote="ka" revision="4.4" />
+  
+  <project path="device/htc/m7tmo" name="android_device_htc_m7tmo" remote="ka" revision="4.4" />
+  <project path="device/htc/m7-common" name="android_device_htc_m7-common" remote="ka" revision="4.4" />
+  <project path="device/htc/msm8960-common" name="android_device_htc_msm8960-common" remote="ka" revision="4.4" />
+  <project path="kernel/htc/m7" name="android_kernel_htc_m7" remote="ka" revision="4.4" />
 
   <!--Evervolv (Github) Hosted Projects-->
-  <project path="build" name="android_build" groups="ev-aosp" >
+  <project path="build" name="android_build" remote="ka" revision="4.4" />
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="bionic" name="android_bionic" groups="ev-aosp" />
@@ -44,28 +47,31 @@
   <project path="development" name="android_development" groups="ev-aosp" />
   <project path="device/generic/goldfish" name="android_device_generic_goldfish" groups="ev-aosp" />
   <project path="external/android-mock" name="android_external_android-mock" groups="ev-aosp" />
-  <project path="external/bluetooth/bluedroid" name="android_external_bluetooth_bluedroid" groups="ev-aosp" />
+  <project path="external/bluetooth/bluedroid" name="android_external_bluetooth_bluedroid" remote="ka" revision="4.4" />
   <project path="external/javasqlite" name="android_external_javasqlite" groups="ev-aosp" />
   <project path="external/openssh" name="android_external_openssh" groups="ev-aosp" />
   <project path="external/tinyalsa" name="android_external_tinyalsa" groups="ev-aosp" />
   <project path="external/wpa_supplicant_8" name="android_external_wpa_supplicant_8" groups="ev-aosp" />
   <project path="external/yaffs2" name="android_external_yaffs2" groups="ev-aosp" />
   <project path="external/zlib" name="android_external_zlib" groups="ev-aosp" />
-  <project path="frameworks/av" name="android_frameworks_av" groups="ev-aosp" />
-  <project path="frameworks/base" name="android_frameworks_base" groups="ev-aosp" />
-  <project path="frameworks/native" name="android_frameworks_native" groups="ev-aosp" />
+  <project path="frameworks/av" name="android_frameworks_av" remote="ka" revision="4.4" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="ka" revision="4.4" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="ka" revision="4.4" />
   <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" groups="ev-aosp" />
   <project path="frameworks/opt/vcard" name="android_frameworks_opt_vcard" groups="ev-aosp" />
   <project path="hardware/broadcom/libbt" name="android_hardware_broadcom_libbt" groups="ev-aosp" />
   <project path="hardware/broadcom/wlan" name="android_hardware_broadcom_wlan" groups="ev-aosp" />
-  <project path="hardware/libhardware" name="android_hardware_libhardware" groups="ev-aosp" />
-  <project path="hardware/libhardware_legacy" name="android_hardware_libhardware_legacy" groups="ev-aosp" />
+  <project path="hardware/libhardware" name="android_hardware_libhardware" remote="ka" revision="4.4" />
+  <project path="hardware/libhardware_legacy" name="android_hardware_libhardware_legacy" remote="ka" revision="4.4" />
   <project path="hardware/qcom/audio" name="android_hardware_qcom_audio" groups="ev-aosp" />
+  <project path="hardware/qcom/audio-caf" name="android_hardware_qcom_audio-caf" remote="ka" revision="4.4" />
   <project path="hardware/qcom/bt" name="android_hardware_qcom_bt" groups="ev-aosp" />
   <project path="hardware/qcom/camera" name="android_hardware_qcom_camera" groups="ev-aosp" />
   <project path="hardware/qcom/display" name="android_hardware_qcom_display" groups="ev-aosp" />
-  <project path="hardware/qcom/keymaster" name="android_hardware_qcom_keymaster" groups="ev-aosp" />
+  <project path="hardware/qcom/display-caf" name="android_hardware_qcom_display-caf" remote="ka" revision="4.4" />
+  <project path="hardware/qcom/keymaster" name="android_hardware_qcom_keymaster" remote="ka" revision="4.4" />
   <project path="hardware/qcom/media" name="android_hardware_qcom_media" groups="ev-aosp" />
+  <project path="hardware/qcom/media-caf" name="android_hardware_qcom_media-caf" remote="ka" revision="4.4" />
   <project path="hardware/qcom/msm8960" name="android_hardware_qcom_msm8960" groups="ev-aosp" />
   <project path="hardware/qcom/power" name="android_hardware_qcom_power" groups="ev-aosp" />
   <project path="hardware/qcom/sensors" name="android_hardware_qcom_sensors" groups="ev-aosp" />
@@ -73,7 +79,7 @@
   <project path="hardware/ril" name="android_hardware_ril" groups="ev-aosp" />
   <project path="hardware/ti/wlan" name="android_hardware_ti_wlan" groups="ev-aosp" />
   <project path="libcore" name="android_libcore" groups="ev-aosp" />
-  <project path="packages/apps/Bluetooth" name="android_packages_apps_Bluetooth" groups="ev-aosp" />
+  <project path="packages/apps/Bluetooth" name="android_packages_apps_Bluetooth" remote="ka" revision="4.4" />
   <project path="packages/apps/Browser" name="android_packages_apps_Browser" groups="ev-aosp" />
   <project path="packages/apps/DeskClock" name="android_packages_apps_DeskClock" groups="ev-aosp" />
   <project path="packages/apps/Email" name="android_packages_apps_Email" groups="ev-aosp" />
@@ -88,7 +94,7 @@
   <project path="packages/services/Telephony" name="android_packages_services_Telephony" groups="ev-aosp" />
   <project path="prebuilts/misc" name="android_prebuilts_misc" groups="ev-aosp" />
   <project path="sdk" name="android_sdk" groups="ev-aosp" />
-  <project path="system/core" name="android_system_core" groups="ev-aosp" />
+  <project path="system/core" name="android_system_core" remote="ka" revision="4.4" />
   <project path="system/extras" name="android_system_extras" groups="ev-aosp" />
   <project path="system/vold" name="android_system_vold" groups="ev-aosp" />
 
